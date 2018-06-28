@@ -25,6 +25,8 @@ export default class QuestionCard extends Component {
             theme:"darcula"
         };
 
+        console.log(this.props.text);
+
         return (
             <div className="questionCard">
                 <Row className={"whatshowsintheconsole"}>

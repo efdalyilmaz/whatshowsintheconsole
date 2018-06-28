@@ -20,7 +20,11 @@ class App extends Component {
     onAnswered(value) {
         let successCount = this.state.Success;
         let failCount = this.state.Failed;
-        const questionId = this.state.QuestionId + 1;
+        let questionId = this.state.QuestionId + 1;
+
+        if(this.state.Questions.length <= questionId){
+            questionId = 0;
+        }
 
         if (value) {
             successCount++;

@@ -24,7 +24,7 @@ body{
 
 .question {
     overflow: auto;
-    height: 400px;
+    max-height: 400px;
     background-color: #57595a;
 }
 
