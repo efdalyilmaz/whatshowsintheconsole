@@ -5,6 +5,17 @@ import CodeMirror from "react-codemirror";
 import 'codemirror/mode/javascript/javascript'
 
 export default class QuestionCard extends Component {
+
+    constructor(props){
+        super(props);
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick(optionsType){
+        console.log(optionsType);
+        this.props.onAnswered(this.props.onAnswered(optionsType === this.props.answer));
+    }
+
     render() {
 
         var options = {
@@ -25,10 +36,10 @@ export default class QuestionCard extends Component {
                 </Row>
                 <Row>
                     <Col span={12}>
-                        <AnswerButton text={this.props.optionsA}/>
+                        <AnswerButton onClick={this.onClick} text={this.props.optionsA} type="A"/>
                     </Col>
                     <Col span={12}>
-                        <AnswerButton text={this.props.optionsB}/>
+                        <AnswerButton onClick={this.onClick} text={this.props.optionsB} type="B"/>
                     </Col>
                 </Row>
             </div>
