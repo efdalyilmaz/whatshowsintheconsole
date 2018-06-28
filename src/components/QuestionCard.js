@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import AnswerButton from './AnswerButton';
 import {Row, Col} from 'antd';
-import CodeMirror from "react-codemirror";
-import 'codemirror/mode/javascript/javascript'
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { darcula } from 'react-syntax-highlighter/styles/prism';
 
 export default class QuestionCard extends Component {
 
@@ -18,23 +18,13 @@ export default class QuestionCard extends Component {
 
     render() {
 
-        var options = {
-            lineNumbers: false,
-            readOnly: true,
-            mode: "javascript",
-            theme:"darcula"
-        };
-
-        console.log(this.props.text);
-
         return (
             <div className="questionCard">
                 <Row className={"whatshowsintheconsole"}>
                     What shows in the console?
                 </Row>
                 <Row className="question">
-                    <CodeMirror value={this.props.text}
-                                options={options}/>
+                    <SyntaxHighlighter language='javascript' style={darcula}>{this.props.text}</SyntaxHighlighter>
                 </Row>
                 <Row>
                     <Col span={12}>

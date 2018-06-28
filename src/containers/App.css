@@ -1,6 +1,4 @@
 @import '~antd/dist/antd.css';
-@import "../../node_modules/codemirror/lib/codemirror.css";
-@import "../../node_modules/codemirror/theme/darcula.css";
 
 body{
     background-color: black;
