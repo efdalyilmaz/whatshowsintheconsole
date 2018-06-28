@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import {Row} from 'antd';
 import QuestionCard from '../components/QuestionCard';
 const jsonData = require('../data/Questions.json');
 
@@ -17,7 +18,14 @@ class App extends Component {
         let optionsA =  this.state.Questions[0] ? this.state.Questions[0].optionsA: "";
         let optionsB =  this.state.Questions[0] ? this.state.Questions[0].optionsB: "";
 
-        return (<QuestionCard text={questionText} optionsA={optionsA} optionsB={optionsB} />);
+        return (
+            <div>
+
+
+                <Row>
+                    <QuestionCard text={questionText} optionsA={optionsA} optionsB={optionsB} />
+                </Row>
+            </div>);
     }
 }
 

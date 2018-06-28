@@ -2,10 +2,24 @@
 @import "../../node_modules/codemirror/lib/codemirror.css";
 @import "../../node_modules/codemirror/theme/darcula.css";
 
+body{
+    background-color: black;
+}
+
+.whatshowsintheconsole{
+    color:orangered;
+    font-size:32px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-family: "Courier";
+    font-weight: bold;
+}
+
 .questionCard {
     width: 75%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 50px;
 }
 
 .question {

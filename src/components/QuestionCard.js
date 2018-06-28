@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import AnswerButton from './AnswerButton';
 import {Row, Col} from 'antd';
 import CodeMirror from "react-codemirror";
+import 'codemirror/mode/javascript/javascript'
 
 export default class QuestionCard extends Component {
     render() {
 
         var options = {
-            lineNumbers: true,
+            lineNumbers: false,
             readOnly: true,
             mode: "javascript",
             theme:"darcula"
@@ -15,12 +16,12 @@ export default class QuestionCard extends Component {
 
         return (
             <div className="questionCard">
+                <Row className={"whatshowsintheconsole"}>
+                    What shows in the console?
+                </Row>
                 <Row className="question">
                     <CodeMirror value={this.props.text}
                                 options={options}/>
-                </Row>
-                <Row>
-                    What shows in the console?
                 </Row>
                 <Row>
                     <Col span={12}>
