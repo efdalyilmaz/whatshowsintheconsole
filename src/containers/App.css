@@ -1,22 +1,32 @@
 @import '~antd/dist/antd.css';
+@import "../../node_modules/codemirror/lib/codemirror.css";
+@import "../../node_modules/codemirror/theme/darcula.css";
 
 .questionCard {
-    text-align: center;
     width: 75%;
     margin-right: auto;
     margin-left: auto;
 }
 
-.question{
-    font-family: Courier;
-    font-weight: bold;
-    color: white;
+.question {
+    overflow: auto;
     height: 400px;
     background-color: #57595a;
 }
 
+.codemirrorCustom {
+    background-color: #57595a;
+    height: 100%;
+}
+
 .answerButton {
+    color: red;
+    text-align: center;
     width: 100%;
     height: 100%;
     background-color: #464449;
+}
+
+.CodeMirror {
+    height: inherit
 }

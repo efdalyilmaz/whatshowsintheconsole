@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import AnswerButton from '../components/AnswerButton';
 import {Row, Col} from 'antd';
+import CodeMirror from "react-codemirror";
 
 class App extends Component {
 
@@ -20,13 +21,33 @@ class App extends Component {
                         }
                         
                         let c = new ChildClass();
-                        console.log(c.getCount())
+                        console.log(c.getCount());
+                        
+                        let c = new ChildClass();
+                        console.log(c.getCount());
+                        
+                        let c = new ChildClass();
+                        console.log(c.getCount());
+                        
+                        let c = new ChildClass();
+                        console.log(c.getCount());
+                        
+                        
+                        let c = new ChildClass();
+                        console.log(c.getCount());
                         `;
+        var options = {
+            lineNumbers: true,
+            readOnly: true,
+            mode: "javascript",
+            theme:"darcula"
+        };
 
         return (
             <div className="questionCard">
                 <Row className="question">
-                    Burada kod var
+                    <CodeMirror value={question}
+                                options={options}/>
                 </Row>
                 <Row>
                     What shows in the console?
@@ -42,24 +63,6 @@ class App extends Component {
             </div>
         );
     }
-
-    // render() {
-    //     let actions = [<AnswerButton text="Answer A"/>, <AnswerButton text="Answer B"/>];
-    //     return (
-    //         <div className="questionCard" style={{width: 600}}>
-    //             <Card
-    //                 cover={<img alt="example"
-    //                             src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>}
-    //             >
-    //                 <Meta title="What shows in the console?"/>
-    //             </Card>
-    //             <div className="antd-card-action">
-    //                 <AnswerButton text="Answer A"/>
-    //                 <AnswerButton text="Answer B"/>
-    //             </div>
-    //         </div>
-    //     );
-    // }
 }
 
 export default App;
