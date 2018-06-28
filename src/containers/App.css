@@ -28,11 +28,6 @@ body{
     background-color: #57595a;
 }
 
-.codemirrorCustom {
-    background-color: #57595a;
-    height: 100%;
-}
-
 .answerButton {
     color: red;
     text-align: center;
